@@ -1,10 +1,15 @@
-# qorner-app
-React Native-Firebase peer2peer trading MVP 
+# fense
+React Native-Firebase peer2peer marketplace MVP 
 ## Screen shots 
-![qrnr-signin](https://user-images.githubusercontent.com/40769994/198758401-96b2485f-61dc-4b33-9ebe-9ccdfd6d0d9e.png)
-![qrnr-signup](https://user-images.githubusercontent.com/40769994/198758411-7a39b6dc-e555-42ac-b57b-ca1948f28e8e.png) 
 
-![qrnr-posting-1](https://user-images.githubusercontent.com/40769994/198758753-8d2b681e-534c-413c-a5e3-90aafa2fdf70.png) 
-![qrnr-posting-2](https://user-images.githubusercontent.com/40769994/198758936-b1d4f62a-cd90-48d3-be0e-4afd1e7d5c2c.png) 
-![qrnr-posting-3](https://user-images.githubusercontent.com/40769994/198759098-ae5c4107-8bd2-4940-825f-4b662584af4e.png)
+![fense-login](https://user-images.githubusercontent.com/40769994/208994295-539d0b09-8632-4e34-aed1-ada9fc94f5bf.png)
+![fense-home-nav](https://user-images.githubusercontent.com/40769994/208994575-2c6c67a6-dab4-49fd-bec9-506d7ae9880b.png)  
+
+
+![fense-post-detail2](https://user-images.githubusercontent.com/40769994/208994664-e90d08da-ffa0-4fb3-89a0-a00995491804.png)
+![fense-post-detail1](https://user-images.githubusercontent.com/40769994/208994646-71aef66d-9a7a-442b-8781-20c40098f58a.png)
+
+![fense-profile-nav](https://user-images.githubusercontent.com/40769994/208994688-1da4f877-b4c5-41e0-b480-149822956ec8.png) 
+![fense-create-post](https://user-images.githubusercontent.com/40769994/208994911-ae4c3e0d-2f65-418a-9f06-31f4aeb836b9.png)
+
 
