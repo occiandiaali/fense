@@ -53,7 +53,7 @@ const CustomHeaderComponent = ({cUser, cAvatar}) => {
 
   return (
     <View style={styles.headerContainer}>
-      <Text style={styles.appName}>floggit</Text>
+      <Text style={styles.appName}>fense</Text>
       <View style={styles.endItems}>
         {cUser ? (
           <Text style={styles.userLabel}>Hi, {cUser}</Text>

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 40,
     borderRadius: 10,
-    backgroundColor: 'pink',
+    backgroundColor: '#072047', //'pink',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -390,8 +390,9 @@ function PostingScreen({navigation}) {
                       fontSize: 18,
                       fontWeight: 'bold',
                       textAlign: 'center',
+                      color: '#FFFFFF',
                     }}>
-                    floggit
+                    submit
                   </Text>
                 </Pressable>
               )}

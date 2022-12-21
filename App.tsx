@@ -55,7 +55,7 @@ function HomeTabs() {
           }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: 'teal',
+        tabBarActiveTintColor: '#FFFFFF',
         tabBarInactiveTintColor: 'gray',
         tabBarLabelStyle: {fontSize: 15, bottom: 8},
         tabBarStyle: {
@@ -63,7 +63,7 @@ function HomeTabs() {
           margin: 8, //16,
           borderRadius: 16,
           bottom: 8,
-          backgroundColor: 'pink',
+          backgroundColor: 'teal', //'pink',
         },
       })}>
       <Tab.Screen

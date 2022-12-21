@@ -23,13 +23,16 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   dropperWrap: {
-    backgroundColor: 'pink',
+    backgroundColor: 'teal', //'pink',
     margin: 6,
     borderRadius: 8,
   },
   dropperWrapText: {
     flex: 1,
     textAlign: 'center',
+    fontSize: 17,
+    paddingBottom: 6,
+    color: '#FFFFFF',
   },
   item: {
     paddingHorizontal: 10,
@@ -122,7 +125,11 @@ const CustomDropDown = ({setChoice}) => {
         <>
           {/* {renderDrop()} */}
           <Text style={styles.dropperWrapText}>{selected}</Text>
-          <Icon name={visible ? 'caret-up' : 'caret-down'} size={18} />
+          <Icon
+            name={visible ? 'caret-up' : 'caret-down'}
+            size={18}
+            style={{color: '#FFFFFF'}}
+          />
           {renderDrop()}
         </>
       </Pressable>

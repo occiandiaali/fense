@@ -16,9 +16,10 @@ import auth from '@react-native-firebase/auth';
 
 const styles = StyleSheet.create({
   appName: {
-    fontSize: 48,
+    fontSize: 64, //48,
     fontWeight: 'bold',
-    bottom: 38,
+    bottom: 64,
+    color: 'teal',
   },
   container: {
     flex: 1,
@@ -146,8 +147,8 @@ const LoginScreen = ({navigation}) => {
   // };
   return (
     <View style={styles.container}>
-      <Text style={styles.txt}>Welcome to</Text>
-      <Text style={styles.appName}>floggit</Text>
+      {/* <Text style={styles.txt}>Welcome to</Text> */}
+      <Text style={styles.appName}>fense</Text>
       <Image
         source={require('./../../assets/images/mobile_login.png')}
         accessibilityLabel="illustration of a person standing beside a mobile phone"

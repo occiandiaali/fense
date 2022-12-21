@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
     zIndex: 7,
   },
   pressable: {
-    width: 100,
+    width: 150, //100,
     height: 40,
-    borderRadius: 8,
-    backgroundColor: 'pink',
+    borderRadius: 16, //8,
+    backgroundColor: '#072047', //'pink',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 24,
@@ -50,21 +50,45 @@ const styles = StyleSheet.create({
   rowOne: {
     padding: 6,
     flexDirection: 'row',
-    bottom: '25%',
+    // bottom: '25%',
+    bottom: '35%',
   },
   rowTwo: {
-    flexDirection: 'row',
-    padding: 6,
-    bottom: '18%',
+    // flexDirection: 'row',
+    // padding: 6,
+    bottom: '10%', //'18%',
   },
   rowThree: {
     flexDirection: 'row',
   },
   timestamp: {
     fontSize: 16,
-    color: '#FFF',
-    bottom: 13,
-    left: 100,
+    bottom: '15%',
+    right: 100,
+    // color: '#FFF',
+    //bottom: 13,
+    //left: 100,
+  },
+  titleTimeRow: {
+    flexDirection: 'row',
+    bottom: '30%',
+  },
+  titleTimeRowTimer: {
+    width: 120,
+    height: 40,
+    borderRadius: 17,
+    backgroundColor: '#072047',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    left: 27,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+  },
+  titleTimeRowTitle: {
+    right: 36,
+    fontSize: 21,
+    color: '#000000',
+    fontWeight: 'bold',
   },
 });
 
@@ -109,7 +133,9 @@ const PostDetails = ({route, navigation}) => {
           height: 45,
           borderRadius: 23,
           position: 'absolute',
-          right: 24,
+          // right: 24,
+          left: 24,
+          top: 32,
           zIndex: 7,
         }}>
         <Ionicons
@@ -125,10 +151,10 @@ const PostDetails = ({route, navigation}) => {
         }}
         style={{width: 550, height: '62%', bottom: '16%'}}
       />
-      <View style={styles.imageOverlay}>
+      {/* <View style={styles.imageOverlay}>
         <Text style={styles.label}>{itemName}</Text>
         <Text style={styles.timestamp}>Posted on {ans}</Text>
-      </View>
+      </View> */}
       <View style={styles.rowOne}>
         <Image
           source={{
@@ -136,15 +162,19 @@ const PostDetails = ({route, navigation}) => {
             uri: ownerImg,
           }}
           style={{
-            width: 30,
-            height: 30,
-            borderRadius: 15,
+            width: 50, //30,
+            height: 50, //30,
+            borderRadius: 25, //15,
+            borderColor: '#FFFFFF',
+            borderWidth: 2,
             marginRight: 8,
-            bottom: 6,
+            bottom: 28, //6,
           }}
         />
-        <Text style={{marginRight: '10%', fontSize: 16}}>{owner}</Text>
-        <Text
+        <Text style={{marginTop: 6, marginRight: '10%', fontSize: 16}}>
+          {owner}
+        </Text>
+        {/* <Text
           style={{
             marginLeft: '6%',
             fontSize: 16,
@@ -155,20 +185,63 @@ const PostDetails = ({route, navigation}) => {
             style: 'currency',
             currency: 'NGN',
           }).format(itemPrice)}
-        </Text>
+        </Text> */}
+        <View
+          style={{
+            marginLeft: '6%',
+            width: 150,
+            height: 60,
+            borderRadius: 16,
+            bottom: 15,
+            padding: 8,
+            alignItems: 'center',
+            backgroundColor: '#FFFFFF',
+          }}>
+          <Text
+            style={{
+              fontSize: 16,
+              fontWeight: 'bold',
+              color: 'black',
+            }}>
+            {new Intl.NumberFormat('ng-NG', {
+              style: 'currency',
+              currency: 'NGN',
+            }).format(itemPrice)}
+          </Text>
+        </View>
       </View>
+      <View style={styles.titleTimeRow}>
+        <Text style={styles.titleTimeRowTitle}>{itemName}</Text>
+        <Text style={styles.titleTimeRowTimer}>Ending in 30mins</Text>
+      </View>
+      <Text style={styles.timestamp}>Posted on {ans}</Text>
       <View style={styles.rowTwo}>
+        <View>
+          <Text
+            style={{
+              color: '#000000',
+              fontWeight: 'bold',
+              fontSize: 18,
+              left: 8,
+            }}>
+            Description
+          </Text>
+        </View>
         <Text style={{fontSize: 18, padding: 6}}>{itemDesc}</Text>
       </View>
       <View style={styles.rowThree}>
         <Pressable onPress={() => null} style={styles.pressable}>
-          <Text style={{fontWeight: 'bold', fontSize: 18}}>get it</Text>
+          <Text style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: 18}}>
+            get it
+          </Text>
         </Pressable>
         {itemNegotiable === true ? (
           <Pressable
             onPress={() => navigation.navigate('Chat')}
             style={styles.pressable}>
-            <Text style={{fontWeight: 'bold', fontSize: 18}}>negotiate</Text>
+            <Text style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: 18}}>
+              negotiate
+            </Text>
           </Pressable>
         ) : null}
       </View>
