@@ -44,7 +44,20 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   loginTxt: {
-    backgroundColor: 'pink',
+    backgroundColor: 'teal', //'pink',
+    // color: '#FFFFFF',
+    width: '60%',
+    height: 50,
+    top: 8,
+    borderRadius: 25,
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+  },
+  loginTxtWhite: {
+    backgroundColor: 'teal', //'pink',
+    color: '#FFFFFF',
     width: '60%',
     height: 50,
     top: 8,
@@ -64,7 +77,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'pink',
+    backgroundColor: 'teal', //'pink',
     padding: 8,
     width: '60%',
     height: 50,
@@ -94,7 +107,7 @@ const LoginScreen = ({navigation}) => {
   const {setAuthed} = useContext(AppContext);
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = React.useState('');
-  const isDisabled = loginDisabled || email.length < 1;
+  const isDisabled = loginDisabled || email.length < 7;
 
   const showToast = (msg: string) => {
     ToastAndroid.showWithGravity(msg, ToastAndroid.LONG, ToastAndroid.BOTTOM);
@@ -111,6 +124,7 @@ const LoginScreen = ({navigation}) => {
   // };
 
   const handleSubmitPress = async () => {
+    // [TODO]: Add email address validation
     if (!email) {
       Alert.alert('Warning', 'Enter email');
       return;
@@ -177,14 +191,18 @@ const LoginScreen = ({navigation}) => {
 
       {loading ? (
         <View style={styles.loginTxtLoadingContainer}>
-          <ActivityIndicator size={'small'} style={{right: 6}} />
+          <ActivityIndicator
+            size={'small'}
+            style={{right: 6}}
+            color="#FFFFFF"
+          />
           <Text style={styles.loginTxtLoadingTxt}>Sign in</Text>
         </View>
       ) : (
         <Text
           disabled={isDisabled}
           onPress={handleSubmitPress}
-          style={styles.loginTxt}>
+          style={!isDisabled ? styles.loginTxtWhite : styles.loginTxt}>
           Sign in
         </Text>
       )}
